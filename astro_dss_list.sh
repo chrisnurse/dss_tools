@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# !!! THIS ISN'T FULLY WORKING YET
+# We need to get the right calibration files based on bin, channel and exposure time
+
 # DSS TOOLS
 # astro_dss_lst.sh
 #
@@ -41,7 +44,7 @@ then
 
     if [ -d "$DARKS_PATH" ]
     then
-        for img in $(find $DARKS_PATH -name "**$5*.fit")
+        for img in $(find $DARKS_PATH -name "*$5*.fit")
         do 
             echo "1	dark	$img"  
         done
@@ -49,7 +52,7 @@ then
 
     if [ -d "$DARK_FLATS_PATH" ]
     then
-        for img in $(find $DARK_FLATS_PATH -name "**$5*.fit")
+        for img in $(find $DARK_FLATS_PATH -name "*$5*.fit")
         do 
             echo "1	darkflat	$img"  
         done
@@ -57,7 +60,7 @@ then
 
     if [ -d "$FLATS_PATH" ]
     then
-        for img in $(find $FLATS_PATH -name "**$5*.fit")
+        for img in $(find $FLATS_PATH -name "*$5*.fit")
         do 
             echo "1	flat	$img"  
         done
