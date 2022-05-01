@@ -60,3 +60,22 @@ etc.
 So where applicable, your calibration data should be organised by image type, binning and exposure time.
 
 5. Use the toolkit and execute astro_help.sh to gert a quick reminder of the most important commands. Execure the help command straight after you have setup the go_astro.sh script, as it will show your PATH is set correctly.
+
+# STACKING PROCESS
+
+The stacking process is assumed to be:
+
+1. Capture images using your ASIAIR
+2. Copy the data from the ASIAIR to your computer
+3. Ensure any calibration data is placed in the home/imaging/calibration folder
+4. Place the light images in any folder you like
+5. Execute astro_clean.sh in order to delete any unwanted files (e.g. ASIAIR thumbnail JPG files)
+6. In the directory where your light frames are stored, execute astro_prep.sh and the files will be organised into sub-directories for each channel
+7. Execute astro_dss_prep.sh and your light frames will all be registered, quality scored and a file list created for each channel ready to execute stacking
+8. TODO: Run the stacking process using the file lists created in the previous step.
+
+# LIMITATIONS
+
+You may not like the way you have to organise data. I like the way it is organised, because as soon as I have dumped calibration data on to my computer I can stop thinking about it. The toolkit will find it when it's needed for any future imaging sessions.
+
+You will need to dive a little deeper into DSS. There is a file in the scripts folder, dss_prefs.txt. This data is placed at the end of every file list. I believe this  data is the settings used during registration and stacking. So for example, when calculating the number of stars, to limit that to a sensible number we will have to and edit the preferences. But the issue is the number will change from session to session. So we need to think about this a little more, and perhaps have the percentage value specified as a command line variable. The user will only know what number to specify though after messing around in DSS. Mmmmmm more to think about :)  
