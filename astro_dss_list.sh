@@ -48,7 +48,7 @@ then
     BIAS_FOLDER="$BIAS_PATH/$BIN"
     if [ -d "$BIAS_FOLDER" ]
     then
-        for img in $(find "$BIAS_FOLDER/$BIN" -name "*.fit")
+        for img in $(find "$BIAS_FOLDER" -name "*.fit")
         do 
             echo "1	bias	$img"  
         done
@@ -56,9 +56,9 @@ then
 
     # Dark flats have the same exposure time as the flats, but with no light on the sensor
     DARK_FLATS_FOLDER="$DARK_FLATS_PATH/$BIN"
-    if [ -d "$DARK_FLATS_PATH" ]
+    if [ -d "$DARK_FLATS_FOLDER" ]
     then
-        for img in $(find $DARK_FLATS_PATH -name "*$BIN*.fit")
+        for img in $(find "$DARK_FLATS_FOLDER" -name "*$BIN*.fit")
         do 
             echo "1	darkflat	$img"  
         done
@@ -68,7 +68,7 @@ then
     FLATS_FOLDER="$FLATS_PATH/$BIN"
     if [ -d "$FLATS_FOLDER" ]
     then
-        for img in $(find $FLATS_FOLDER -name "*$BIN*.fit")
+        for img in $(find "$FLATS_FOLDER" -name "*$BIN*.fit")
         do 
             echo "1	flat	$img"  
         done
@@ -79,7 +79,7 @@ then
     DARKS_FOLDER="$DARKS_PATH/$BIN/$EXPOSURE_TIME"
     if [ -d "$DARKS_FOLDER" ]
     then
-        for img in $(find "$DARKS_FOLDER/$BIN/$EXPOSURE_TIME" -name "*$BIN*.fit")
+        for img in $(find "$DARKS_FOLDER" -name "*$BIN*.fit")
         do 
             echo "1	dark	$img"  
         done
