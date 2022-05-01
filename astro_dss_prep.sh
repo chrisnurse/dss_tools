@@ -29,7 +29,7 @@ echo "This can take a while and you may want to review the Deep Sky Stacker pref
 echo
 echo "Deep Sky Stacker is registering and scoring the images..."
 
-DeepSkyStackerCL.exe /r dss_images.txt > /dev/null
+DeepSkyStackerCL.exe /FITS /r dss_images.txt > /dev/null
 
 echo "Deep Sky Stacker has registered the images"
 echo
