@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# DSS TOOLS
+# The purpose of this script is to initialise environment variables 
+# which are used throughout the toolkit.
+
 export ASTRO_HOME=/mnt/m/astro
 export DSS_PATH="/mnt/m/astro/deep_sky_stacker/DeepSkyStacker"
 

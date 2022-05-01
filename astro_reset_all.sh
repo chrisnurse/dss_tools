@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# DSS TOOLS
+# The purpose of this script is to move all of the data files back into the current folder
+# This way, the files are essentially returned to the same state as when they were copied
+# from the ASIAIR.
+
 astro_reset_batch.sh L
 astro_reset_batch.sh R
 astro_reset_batch.sh G

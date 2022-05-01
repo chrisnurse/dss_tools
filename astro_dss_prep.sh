@@ -1,3 +1,10 @@
+#!/bin/bash
+
+# DSS TOOLS
+# The purpose of this script is to execute astro_dss_list.sh then score the FIT quality of the fit files,
+# and finally to create a file list for each channel (LRGBHOS) which contains the reference frame and 
+# calibration frames.
+
 if [ "$1" = "" ]
 then
     echo "Usage:"

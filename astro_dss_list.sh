@@ -1,3 +1,15 @@
+#!/bin/bash
+
+# DSS TOOLS
+# astro_dss_lst.sh
+#
+# The purpose of this script is to create DSS file lists.
+#
+# Initially, the first file list to be created is a list of FIT files from all channels. By creating a single
+# file containing images from all channels, we can register, and consequently score the quality of all files
+# in one operation.
+
+
 echo "DSS file list" 
 echo "CHECKED	TYPE	FILE" 
 

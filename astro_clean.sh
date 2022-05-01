@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# DSS TOOLS
+# The purpose of this script is to delete redundant or tempoary files
+# created by DSS or the ASIAIR.
+# 
+# Some of the files also relate to Nebulosity.
+
+
 echo "DANGER!"
 echo
 echo "The purpose of this script is to remove any unwanted files in the current or sub-directories."

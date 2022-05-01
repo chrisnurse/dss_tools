@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# DSS TOOLS
+# The purpose of this script is to move the stacked image for each channel into the stacked_channels folder.
+# This is intended to make it easy to find and identify the stacked images, in order to finally load
+# them into image editing software.
+
 echo "Copy stacked files into the stacked_channels directory..."
 cp l/Autosave.fit stacked_channels/l.fit 2> /dev/null 
 cp r/Autosave.fit stacked_channels/r.fit 2> /dev/null
