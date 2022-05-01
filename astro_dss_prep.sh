@@ -11,11 +11,13 @@ then
     echo "  astro_dss_prep.sh Bin"
     echo
     echo "Arguments:"
-    echo "  Bin: Bin1, Bin2, etc. Must match the part of the file name that specifies binning."
+    echo "     Bin: Bin1, Bin2, etc. Must match the part of the file name that specifies binning."
+    echo "Exposure: 60s or 180s, etc. This is the exposure time."
     exit 1
 fi
 
 BIN=$1
+EXPOSURE_TIME=$2
 
 echo "Creating Deep Sky Stacker file list in ./dss_images.txt"
 echo
@@ -55,10 +57,10 @@ done
 echo "Best image is: $BEST_IMAGE"
 echo "        Score: $BEST_SCORE"
 
-[ -d ./L ] && astro_dss_list.sh ./L *.fit $BEST_IMAGE cal $BIN > l_dss_list.txt && 
-[ -d ./R ] && astro_dss_list.sh ./R *.fit $BEST_IMAGE cal $BIN > r_dss_list.txt
-[ -d ./G ] && astro_dss_list.sh ./G *.fit $BEST_IMAGE cal $BIN > g_dss_list.txt
-[ -d ./B ] && astro_dss_list.sh ./B *.fit $BEST_IMAGE cal $BIN > b_dss_list.txt
-[ -d ./H ] && astro_dss_list.sh ./H *.fit $BEST_IMAGE cal $BIN > h_dss_list.txt
-[ -d ./O ] && astro_dss_list.sh ./O *.fit $BEST_IMAGE cal $BIN > o_dss_list.txt
-[ -d ./S ] && astro_dss_list.sh ./S *.fit $BEST_IMAGE cal $BIN > s_dss_list.txt
+[ -d ./L ] && astro_dss_list.sh ./L *.fit $BEST_IMAGE cal $BIN $EXPOSURE_TIME > l_dss_list.txt && 
+[ -d ./R ] && astro_dss_list.sh ./R *.fit $BEST_IMAGE cal $BIN $EXPOSURE_TIME > r_dss_list.txt
+[ -d ./G ] && astro_dss_list.sh ./G *.fit $BEST_IMAGE cal $BIN $EXPOSURE_TIME > g_dss_list.txt
+[ -d ./B ] && astro_dss_list.sh ./B *.fit $BEST_IMAGE cal $BIN $EXPOSURE_TIME > b_dss_list.txt
+[ -d ./H ] && astro_dss_list.sh ./H *.fit $BEST_IMAGE cal $BIN $EXPOSURE_TIME > h_dss_list.txt
+[ -d ./O ] && astro_dss_list.sh ./O *.fit $BEST_IMAGE cal $BIN $EXPOSURE_TIME > o_dss_list.txt
+[ -d ./S ] && astro_dss_list.sh ./S *.fit $BEST_IMAGE cal $BIN $EXPOSURE_TIME > s_dss_list.txt
