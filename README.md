@@ -73,6 +73,7 @@ The stacking process is assumed to be:
 6. In the directory where your light frames are stored, execute astro_prep.sh and the files will be organised into sub-directories for each channel
 7. Execute astro_dss_prep.sh and your light frames will all be registered, quality scored and a file list created for each channel ready to execute stacking
 8. TODO: Run the stacking process using the file lists created in the previous step.
+9. TODO: Align the stacked images created for each channel, so they can be import into the image edit software. (Nebulosity?)
 
 # LIMITATIONS
 
