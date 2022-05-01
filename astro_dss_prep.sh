@@ -67,3 +67,4 @@ echo
 [ -d ./O ] && astro_dss_list.sh ./O *.fit $BEST_IMAGE cal $BIN $EXPOSURE_TIME > o_dss_list.txt && echo "Created list file for channel: O"
 [ -d ./S ] && astro_dss_list.sh ./S *.fit $BEST_IMAGE cal $BIN $EXPOSURE_TIME > s_dss_list.txt && echo "Created list file for channel: S"
 echo
+echo "Each of the above files has the lights for the specific channel, together with available calibration images."
