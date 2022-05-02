@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # DSS TOOLS
-
+# This script presents the help information for the toolkit commands
 
 echo "Oztronomy - Deep Sky Stacker and ASIAIR data toolkit"
 echo "----------------------------------------------------"
@@ -10,7 +10,7 @@ echo "The toolkit is currently most useful when paired with Deep Sky Stacker and
 echo
 echo "Use '. go_astro.sh' to move to the image storage directory, and initialise required environment variables"
 echo
-echo "Quick start:"
+echo "Quick start, run the following commands in the folder that you copied your ASIAIR data to:"
 echo
 echo "astro_clean.sh                Cleanup unwanted files"
 echo "astro_prep.sh                 Organise images into directories for each channel"
