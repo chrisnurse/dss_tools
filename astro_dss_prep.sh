@@ -8,7 +8,7 @@
 if [ "$1" = "" ]
 then
     echo "Usage:"
-    echo "  astro_dss_prep.sh Bin"
+    echo "  astro_dss_prep.sh Bin Exposure"
     echo
     echo "Arguments:"
     echo "     Bin: Bin1, Bin2, etc. Must match the part of the file name that specifies binning."
