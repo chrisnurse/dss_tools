@@ -83,7 +83,6 @@ You will need to dive a little deeper into DSS. There is a file in the scripts f
 
 
 # FULLY AUTOMATED PROCESS
-# ~.~.~.~.~.~.~.~.~.~.~.~
 
 Run: astro_auto.sh
 
