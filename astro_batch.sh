@@ -12,18 +12,23 @@
 # NOTE: On the ASIAIR, you must name your filters simply as follows:
 # L R G B H O S
 
+# Filter portion of name is uppercase
+f=$1
+FILTER=${f^^}
+FILES="*_"$FILTER"_*fit"
 
-files=$(ls ./*_$1_*fit 2> /dev/null | wc -l)
 
-if [ "$files" == "0" ]
+if [ $(find . -name "$FILES" | wc -l) = "0" ]
 then
-    echo "There are no '.fit' files for the $1 channel"
+    echo "There are no '.fit' files for the $FILTER channel"
     exit 0
 fi
 
+echo "Organising data for: $FILTER"
+
 [ ! -d ./$1 ] && mkdir ./$1 
 
-find *_$1_*fit -exec mv {} ./$1 \; 
+find . -maxdepth 1 -name "$FILES" -exec mv {} ./$1 \; 
 
 files=$(ls ./$1/*.fit 2> /dev/null | wc -l)
 

@@ -5,24 +5,21 @@
 # This way, the files are essentially returned to the same state as when they were copied
 # from the ASIAIR.
 
-astro_reset_batch.sh L
-astro_reset_batch.sh R
-astro_reset_batch.sh G
-astro_reset_batch.sh B
-astro_reset_batch.sh H
-astro_reset_batch.sh O
-astro_reset_batch.sh S
+astro_reset_batch.sh l
+astro_reset_batch.sh r
+astro_reset_batch.sh g
+astro_reset_batch.sh b
+astro_reset_batch.sh h
+astro_reset_batch.sh o
+astro_reset_batch.sh s
 
-files=$(ls ./dark/* 2> /dev/null | wc -l)
 
-if [ "$files" == "0" ]
+if [ -d "./stacked_channels" ]
 then
-    rmdir ./dark
+    rm -rf ./stacked_channels
 fi
 
-files=$(ls ./stacked_channels/* 2> /dev/null | wc -l)
-
-if [ "$files" == "0" ]
-then
-    rmdir ./stacked_channels
-fi
+find . -name 'Autosave.fit' -delete
+find . -name '*dss*txt' -delete
+find . -name '*.Info*txt' -delete
+find . -name '*.stackinfo.txt' -delete

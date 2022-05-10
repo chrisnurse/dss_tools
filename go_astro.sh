@@ -26,4 +26,4 @@ export FLATS_PATH="$ASTRO_HOME/imaging/calibration/Flats"
 # Change directory to the preferred location, which might be the ASTRO_HOME folder, but it can also be somewhere else that you store your data
 cd $ASTRO_HOME
 
-echo astro_help.sh
+astro_help.sh

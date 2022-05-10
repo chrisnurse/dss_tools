@@ -14,7 +14,14 @@ echo "Quick start, run the following commands in the folder that you copied your
 echo
 echo "astro_clean.sh                Cleanup unwanted files"
 echo "astro_prep.sh                 Organise images into directories for each channel"
-echo "astro_dss_prep.sh Bin1 180s   Create the DSS stacking files, and include calibration frames to suit the binning and exposure time used"
+echo "astro_dss_prep.sh Bin1 180.0s Create the DSS stacking files, and include calibration frames to suit the binning and exposure time used"
+echo "astro_dss_stack.sh            Automatically stack all channels with available data"
+echo
+echo "FULLY AUTOMATED PROCESS"
+echo "~.~.~.~.~.~.~.~.~.~.~.~"
+echo
+echo "Run: astro_auto.sh"
+echo "This command cleans redundant files, organises the data, registers the images with DSS and then stacks the data for each channel."
 echo
 echo
 echo "--------------------------------------------------------------------------------------------------------------------------------------"
@@ -26,7 +33,7 @@ echo
 echo "astro_reset_batch.sh              Move all fit files into their own channel directory (LRGBHOS"
 echo
 echo "astro_clean.sh                    Remove temporary files used in grading image quality and stacking"
-echo
+echo "astro_dss_stack.sh                Automatically stack all channels with available data"
 echo "astro_get_stacked.sh              Move stacked files from channel directories to the stacked_channels directory"
 echo
 echo

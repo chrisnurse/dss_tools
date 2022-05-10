@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# !!! THIS ISN'T FULLY WORKING YET
-# We need to get the right calibration files based on bin, channel and exposure time
-
 # DSS TOOLS
 # astro_dss_lst.sh
 #
@@ -40,7 +37,7 @@ then
 
     if [ "$EXPOSURE_TIME" = "" ]
     then
-        echo "When using calibration, you must specify exposure time, e.g. 30s, 180s etc."
+        echo "When using calibration, you must specify exposure time, e.g. 30.0s, 180.0s etc."
         exit 1
     fi
 

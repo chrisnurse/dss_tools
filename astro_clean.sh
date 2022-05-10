@@ -23,11 +23,16 @@ echo
 echo
 echo "Press CTRL-C to abort..."
 echo
+
 read -p "Press ENTER to continue..."
 read -p "Press ENTER again if you are sure you wish to continue..."
 
-find . -name 'Autosave.tif' -delete && \
-find . -name 'pproc_*.fit' -delete && \
-find . -name 'Q*_Light*.fit' -delete && \
+echo
+
 find . -name '*.jpg' -delete
 find . -name '*.Info.txt' -delete
+find . -name 'Autosave.tif' -delete
+find . -name 'Autosave.fit' -delete
+find . -name 'Autosave.fit*txt' -delete
+find . -name 'pproc_*.fit' -delete
+find . -name 'Q*_Light*.fit' -delete

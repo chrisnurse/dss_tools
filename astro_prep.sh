@@ -23,11 +23,11 @@ then
     mkdir ./stacked_channels
 fi
 
-astro_batch.sh L
-astro_batch.sh R
-astro_batch.sh G
-astro_batch.sh B
+astro_batch.sh l
+astro_batch.sh r
+astro_batch.sh g
+astro_batch.sh b
 
-astro_batch.sh H
-astro_batch.sh O
-astro_batch.sh S
+astro_batch.sh h
+astro_batch.sh o
+astro_batch.sh s
