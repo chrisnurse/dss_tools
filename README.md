@@ -80,3 +80,11 @@ The stacking process is assumed to be:
 You may not like the way you have to organise data. I like the way it is organised, because as soon as I have dumped calibration data on to my computer I can stop thinking about it. The toolkit will find it when it's needed for any future imaging sessions.
 
 You will need to dive a little deeper into DSS. There is a file in the scripts folder, dss_prefs.txt. This data is placed at the end of every file list. I believe this  data is the settings used during registration and stacking. So for example, when calculating the number of stars, to limit that to a sensible number we will have to and edit the preferences. But the issue is the number will change from session to session. So we need to think about this a little more, and perhaps have the percentage value specified as a command line variable. The user will only know what number to specify though after messing around in DSS. Mmmmmm more to think about :)  
+
+
+FULLY AUTOMATED PROCESS
+~.~.~.~.~.~.~.~.~.~.~.~
+
+Run: astro_auto.sh
+
+This command cleans redundant files, organises the data, registers the images with DSS and then stacks the data for each channel.
